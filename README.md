@@ -1,0 +1,1 @@
+# drupal7-blank-module-custom-module
