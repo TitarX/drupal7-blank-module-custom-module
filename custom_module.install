@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * Performs database updates and uninstallation cleanup for the Custom module
+ * module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function custom_module_install() {
+  db_update('system')
+    ->fields(['weight' => 100])
+    ->condition('type', 'module')
+    ->condition('name', 'custom_module')
+    ->execute();
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function custom_module_uninstall() {
+  cache_clear_all('custom_module', 'cache', TRUE);
+  menu_rebuild();
+}

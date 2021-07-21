@@ -1,0 +1,17 @@
+name = Custom module
+description = Custom module
+core = 7.x
+package = Other
+configure = admin/config/content/custom_module
+
+dependencies[] = node
+dependencies[] = views
+
+stylesheets[all][] = css/custom_module.css
+
+scripts[] = js/custom_module.js
+
+version = "7.x-1.0"
+core = "7.x"
+project = "Custom module"
+datestamp = "1615908886"
